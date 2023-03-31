@@ -36,26 +36,15 @@
   <link href="img/splash/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
   <link href="img/splash/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
 
-  // JavaScript code to execute a function when the buttons are clicked
-<script> const button1 = document.getElementById('button6');
-const button2 = document.getElementById('button9');
-let clickCount = 0;
+<script>
+    // JavaScript code to execute a function when the buttons are clicked
+    const button6 = document.getElementById('button6');
+    const button9 = document.getElementById('button9');
+    let clickCount = 0;
 
-function handleClick() {
-  clickCount++;
-  if (clickCount === 2) {prox()
-    // execute your function here
-    console.log("Both buttons clicked!");
-    clickCount = 0; // reset click count
-  }
-}
-
-button1.addEventListener('click', handleClick);
-button2.addEventListener('click', handleClick); </script>
-  
-  <script>
-        function prox() {
-            var url = document.getElementById('input');
+    function handleClick() {
+      clickCount++;
+      if (clickCount === 2) {
             var win = window.open();
             win.document.body.style.margin = '0';
             win.document.body.style.height = '100vh';
@@ -66,8 +55,13 @@ button2.addEventListener('click', handleClick); </script>
             iframe.style.margin = '0';
             iframe.src = 'https://ultproxy.weebly.com';
             win.document.body.appendChild(iframe);
-        }
-        </script>
+        clickCount = 0; // reset click count
+      }
+    }
+
+    button6.addEventListener('click', handleClick);
+    button9.addEventListener('click', handleClick);
+  </script>
   
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" type="text/css" href="style.css">
